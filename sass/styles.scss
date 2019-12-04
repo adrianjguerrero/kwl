@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+$family-sans-serif: 'Montserrat', sans-serif;
+$primary: yellow;
+
+:root{
+    --primary: #{$primary};
+}
+
+
+
+
+@import "../node_modules/bulma/bulma.sass";
+
+
+section{
+    padding: 60px 30px;
+}
+
+.video-section{
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button{
+        font-weight: 600;
+        background: var(--primary);
+        border: 2px solid black;
+        color: black;
+    }
+}
