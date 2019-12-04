@@ -14,8 +14,11 @@ $primary: yellow;
 
 
 
-
+// framework bulma
 @import "../node_modules/bulma/bulma.sass";
+
+// lightgallery
+@import "../css/lightgallery.min.css";
 
 
 section {
