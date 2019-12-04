@@ -9412,4 +9412,16 @@ section {
   content: "-";
 }
 
+.gallery {
+  padding-left: 0;
+  padding-right: 0;
+}
+.gallery h2 {
+  font-weight: 600;
+  padding-left: 40px;
+}
+.gallery img {
+  padding: 0;
+}
+
 /*# sourceMappingURL=styles.css.map */
