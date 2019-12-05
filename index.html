@@ -114,38 +114,38 @@
     
         <section class="section gallery">
     
-            <div class="columns is-multiline">
+            <div id="lightgallery" class="columns is-multiline">
                 <h2 class="column is-12 title is-2">Espacios para ser productivos</h2>
-                <div class="column is-4">
+                <a href="img/1.png" class="column is-4">
                     <p>OFICINAS 
                         PRIVADAS</p>
                     <img src="img/1.png" alt="">
-                </div>
-                <div class="column is-4">
+                </a>
+                <a href="img/2.png" class="column is-4">
                     <p>OFICINAS 
                         PRIVADAS</p>
                     <img src="img/2.png" alt="">
-                </div>
-                <div class="column is-4">
+                </a>
+                <a href="img/3.png" class="column is-4">
                     <p>OFICINAS 
                         PRIVADAS</p>
                     <img src="img/3.png" alt="">
-                </div>
-                <div class="column is-4">
+                </a>
+                <a href="img/4.png" class="column is-4">
                     <p>OFICINAS 
                         PRIVADAS</p>
                     <img src="img/4.png" alt="">
-                </div>
-                <div class="column is-4">
+                </a>
+                <a href="img/5.png" class="column is-4">
                     <p>OFICINAS 
                         PRIVADAS</p>
                     <img src="img/5.png" alt="">
-                </div>
-                <div class="column is-4">
+                </a>
+                <a href="img/6.png" class="column is-4">
                     <p>OFICINAS 
                         PRIVADAS</p>
                     <img src="img/6.png" alt="">
-                </div>
+                </a>
             </div>
     
         </section>
@@ -1293,14 +1293,14 @@
     </div>
 
     <script src="js/fullpage.min.js"></script>
+    <script src="js/lightgallery.min.js"></script>
 
     <script>
-        // var myFullpage = new fullpage('#fullpage');
-
+        var myFullpage = new fullpage('#fullpage');
+        lightGallery(document.getElementById('lightgallery')); 
     </script>
         
     
-    <!-- <script src="js/lightgallery.js"></script> -->
 </body>
 
 </html>
