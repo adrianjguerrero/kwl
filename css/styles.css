@@ -7,6 +7,7 @@
 
 :root {
   --primary: yellow;
+  --espaciado-footer: 35px;
 }
 
 /*! bulma.io v0.8.0 | MIT License | github.com/jgthms/bulma */
@@ -9364,7 +9365,10 @@ nav svg {
 }
 
 .video-section {
-  padding-right: 0;
+  padding: 50px 0px 30px 50px;
+}
+.video-section nav {
+  padding: 0;
 }
 .video-section .columns {
   display: flex;
@@ -9382,6 +9386,9 @@ nav svg {
   width: 100%;
   object-fit: cover;
 }
+.video-section__texto > *:not(:last-child) {
+  margin-bottom: 24px;
+}
 .video-section button {
   font-weight: 600;
   background: var(--primary);
@@ -9389,6 +9396,7 @@ nav svg {
   border-radius: 15px;
   color: black;
   font-weight: 900;
+  align-self: flex-start;
 }
 
 .membresias .columns.is-multiline {
@@ -9424,7 +9432,8 @@ nav svg {
 .membresias__membresia h2 {
   font-weight: 600;
 }
-.membresias__membresia h3, .membresias__membresia p span {
+.membresias__membresia h3,
+.membresias__membresia p span {
   width: 80%;
   display: block;
   background-color: var(--primary);
@@ -9499,6 +9508,56 @@ nav svg {
   filter: grayscale(1);
   transition: filter 0.3s ease-in;
   cursor: pointer;
+}
+
+footer .footer__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 70px;
+  font-style: normal;
+  font-weight: 600;
+  color: black;
+}
+footer .footer__text > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+footer .footer__text a {
+  color: black;
+}
+footer .footer__text a.contact-tel svg {
+  margin-right: calc(var(--espaciado-footer) / 1.9);
+}
+footer .footer__text a.contact-mail svg {
+  height: 15px;
+  margin-right: calc(var(--espaciado-footer) / 3);
+}
+footer .footer__text-address {
+  white-space: pre-line;
+  padding-left: var(--espaciado-footer);
+  position: relative;
+}
+footer .footer__text-address svg {
+  position: absolute;
+  left: 0;
+  top: 5%;
+}
+footer .footer__text svg {
+  height: 25px;
+}
+footer .footer__media {
+  width: 100%;
+  padding-left: var(--espaciado-footer);
+  font-weight: 600;
+}
+footer .footer__media p {
+  white-space: pre-line;
+}
+footer .footer__media a {
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */
