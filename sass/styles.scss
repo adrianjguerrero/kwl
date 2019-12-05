@@ -6,7 +6,7 @@
 
 $family-sans-serif: 'Montserrat',
 sans-serif;
-$primary: yellow;
+$primary: #fbed21;
 
 :root {
     --primary: #{$primary};
@@ -95,7 +95,7 @@ nav {
 
 .membresias {
     padding-top: 0;
-  
+    background-color: var(--primary);
     .columns.is-multiline {
         justify-content: space-evenly;
     }
@@ -109,13 +109,12 @@ nav {
             border-radius: 0 0 5px 5px;
             font-weight: 700;
             padding-bottom: 70px;
-            padding-left: 13%;
+            padding-left: 4%;
             text-align: left;
 
             svg {
                 position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
+                left: 0;
                 height: 150px;
             }
         }
@@ -138,7 +137,7 @@ nav {
 
         h3,
         p span {
-            width: 80%;
+            width: 100%;
             display: block;
             background-color: var(--primary);
             margin-right: auto;
@@ -147,7 +146,7 @@ nav {
 
         h3 {
             text-align: left;
-            padding-left: 15px;
+            padding-left: 2px;
             font-size: 40px;
             margin-bottom: 0 !important;
             border-radius: 5px 5px 0 0;
