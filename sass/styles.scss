@@ -19,8 +19,9 @@ $primary: yellow;
 @import "../node_modules/bulma/bulma.sass";
 
 // lightgallery
-// @import "../css/lightgallery.min.css";
+@import "../css/lightgallery.min.css";
 
+//fullpage.js
 @import "../css/fullpage.min.css";
 
 
@@ -31,6 +32,10 @@ section {
 
 .section{
     height: 100vh;
+}
+
+.title{
+    color: black;
 }
 
 
@@ -213,11 +218,13 @@ nav {
 
             p {
                 opacity: 0;
+                cursor: pointer;
             }
         }
 
         p {
-            font-weight: 600;
+            font-weight: 900;
+            font-size: 30px;
             color: white;
             display: block;
             width: 100%;
@@ -228,11 +235,8 @@ nav {
             z-index: 5;
             opacity: 1;
             transition: opacity 0.3s ease-in;
-            // left: 0;
-            // right: 0;
-            // top: 0;
-            // bottom: 0;
-            // margin: auto;
+            white-space: pre-line;
+            letter-spacing: 3px;
         }
 
         img {

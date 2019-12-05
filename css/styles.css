@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900&display=swap");
+@import "../css/lightgallery.min.css";
 @import "../css/fullpage.min.css";
 * {
   box-sizing: border-box;
@@ -9360,6 +9361,10 @@ section {
   height: 100vh;
 }
 
+.title {
+  color: black;
+}
+
 nav {
   padding-left: 50px;
   padding-top: 50px;
@@ -9501,9 +9506,11 @@ nav svg {
 }
 .gallery .column:not(h2):hover p {
   opacity: 0;
+  cursor: pointer;
 }
 .gallery .column:not(h2) p {
-  font-weight: 600;
+  font-weight: 900;
+  font-size: 30px;
   color: white;
   display: block;
   width: 100%;
@@ -9514,6 +9521,8 @@ nav svg {
   z-index: 5;
   opacity: 1;
   transition: opacity 0.3s ease-in;
+  white-space: pre-line;
+  letter-spacing: 3px;
 }
 .gallery .column:not(h2) img {
   width: 100%;
