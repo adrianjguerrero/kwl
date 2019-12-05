@@ -19,13 +19,20 @@ $primary: yellow;
 @import "../node_modules/bulma/bulma.sass";
 
 // lightgallery
-@import "../css/lightgallery.min.css";
+// @import "../css/lightgallery.min.css";
+
+@import "../css/fullpage.min.css";
 
 
 section {
     padding: 60px 30px;
     color: black;
 }
+
+.section{
+    height: 100vh;
+}
+
 
 nav {
     padding-left: 50px;
@@ -37,11 +44,8 @@ nav {
 }
 
 .video-section {
-    // padding-right: 0;
-    // padding-top: 30px;
-    // padding-left: 30px;
-    // padding-bottom: 30px;
     padding: 50px 0px 30px 50px;
+    
 
     nav {
         padding: 0;
@@ -85,7 +89,8 @@ nav {
 }
 
 .membresias {
-
+    padding-top: 0;
+  
     .columns.is-multiline {
         justify-content: space-evenly;
     }
@@ -164,6 +169,7 @@ nav {
 }
 
 .features {
+    padding-top: 0;
     ul {
         li {
             display: flex;
@@ -180,6 +186,7 @@ nav {
 }
 
 .gallery {
+    padding-top: 0;
     padding-left: 0;
     padding-right: 0;
 
