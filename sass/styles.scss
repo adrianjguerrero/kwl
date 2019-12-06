@@ -20,7 +20,17 @@ $primary: #fbed21;
 
 
 // framework bulma
-@import "../node_modules/bulma/bulma.sass";
+
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+
+
+
+
+
+
 
 // lightgallery
 @import "../css/lightgallery.min.css";
