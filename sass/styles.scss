@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900&display=swap');
 
 $family-sans-serif: 'Montserrat',
@@ -30,55 +28,57 @@ $primary: #fbed21;
 //fullpage.js
 @import "../css/fullpage.min.css";
 
-*,*::after,*::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
 
 section {
 
-    
+
     padding: 60px 30px;
     color: black;
 
-    @include rwd('max',768px){
+    @include rwd('max', 768px) {
         padding: 15px 0;
     }
 }
 
-.iScrollIndicator{
-    width: 0!important;
+.iScrollIndicator {
+    width: 0 !important;
     // scroll del fullpagejs
 }
 
-.seccion{
+.seccion {
 
-    @include rwd('min',768px){
+    @include rwd('min', 768px) {
         padding: inherit;
 
     }
 
-    
-    
+
+
     // height: 100vh;
-    @include rwd('max',768px){
+    @include rwd('max', 768px) {
         // padding: 0;
     }
 }
 
-.title{
+.title {
     color: black;
 
-    @include rwd('max',768px){
-        font-size: 21px!important;
+    @include rwd('max', 768px) {
+        font-size: 21px !important;
     }
 }
 
-.column{
+.column {
     padding: initial;
 
-    &s{
-        @include rwd('max',768px){
+    &s {
+        @include rwd('max', 768px) {
 
             margin: 0;
         }
@@ -90,7 +90,7 @@ nav {
     padding-left: 50px;
     padding-top: 50px;
 
-    .navbar-brand{
+    .navbar-brand {
         justify-content: center;
         margin-bottom: 20px;
     }
@@ -103,24 +103,24 @@ nav {
 .video-section {
     padding: 50px 0px 30px 50px;
 
-    @include rwd('max',768px){
+    @include rwd('max', 768px) {
         padding: 25px 0px 0px 0px;
     }
-    
 
-    &__texto{
+
+    &__texto {
         padding: 15px 25px;
     }
 
     nav {
         padding: 0;
 
-        .navbar-brand{
-            @include rwd('max',768px){
+        .navbar-brand {
+            @include rwd('max', 768px) {
                 justify-content: center;
                 margin-bottom: 20px;
 
-                svg{
+                svg {
                     width: 96px;
                 }
             }
@@ -138,8 +138,8 @@ nav {
             justify-content: center;
             align-items: center;
 
-            @include rwd('max',768px){
-             text-align: center;
+            @include rwd('max', 768px) {
+                text-align: center;
             }
 
             img.video {
@@ -148,8 +148,8 @@ nav {
                 object-fit: cover;
             }
 
-            h1{
-                @include rwd('max',768px){
+            h1 {
+                @include rwd('max', 768px) {
                     font-size: 21px;
                 }
             }
@@ -172,7 +172,7 @@ nav {
         font-weight: 900;
         align-self: flex-start;
 
-        @include rwd('max',768px){
+        @include rwd('max', 768px) {
             align-self: center;
         }
     }
@@ -180,13 +180,13 @@ nav {
 
 .membresias {
     background-color: var(--primary);
-    
-    @include rwd('min',768px){
-        
+
+    @include rwd('min', 768px) {
+
         padding-top: 0;
     }
 
-    @include rwd('max',768px){
+    @include rwd('max', 768px) {
         padding: 35px 15px;
     }
 
@@ -223,14 +223,14 @@ nav {
     }
 
     &__membresia {
-        
-        @include rwd('max',768px){
+
+        @include rwd('max', 768px) {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        
-        @include rwd('min',768px){
+
+        @include rwd('min', 768px) {
             max-width: 302px;
 
         }
@@ -252,12 +252,12 @@ nav {
             text-align: left;
             padding-left: 2px;
             font-size: 40px;
-            margin-bottom: 0 ;
+            margin-bottom: 0;
             border-radius: 5px 5px 0 0;
             padding-top: 10px;
             font-weight: 600;
 
-            @include rwd('max',768px){
+            @include rwd('max', 768px) {
                 text-align: center;
                 width: 90%;
             }
@@ -288,12 +288,13 @@ nav {
     padding-left: 0;
     padding-right: 0;
 
-    @include rwd('max',768px){
+    @include rwd('max', 768px) {
         padding-top: 15px;
-        .columns{
+
+        .columns {
             display: flex;
 
-            & > .column{
+            &>.column {
                 flex: none;
             }
         }
@@ -304,7 +305,7 @@ nav {
         font-weight: 600;
         padding-left: 40px;
 
-        @include rwd('max',768px){
+        @include rwd('max', 768px) {
             padding-left: 12px;
             width: 100%;
         }
@@ -344,7 +345,7 @@ nav {
             white-space: pre-line;
             letter-spacing: 3px;
 
-            @include rwd('max',768px){
+            @include rwd('max', 768px) {
                 font-size: 15px;
             }
         }
@@ -364,8 +365,18 @@ nav {
 
 
 .features {
+    h2 {
+        padding-left: 8px;
+    }
+
     padding-top: 0;
+
     ul {
+
+        @include rwd('max', 768px) {
+            display: flex;
+        }
+
         li {
             display: flex;
             flex-direction: column;
@@ -379,6 +390,10 @@ nav {
             svg {
                 height: 50px;
             }
+
+            @include rwd('max', 768px) {
+                margin-bottom: 15px;
+            }
         }
 
     }
@@ -386,15 +401,25 @@ nav {
 
 
 footer {
+    h4 {
+        @include rwd('max', 768px) {
+            padding-left: 8px;
+        }
+    }
+
     .footer {
 
-        &__map{
-            iframe{
+        &__map {
+            iframe {
                 width: 100%;
                 height: 100%;
             }
+
+            @include rwd('max', 768px) {
+                margin-bottom: 15px;
+            }
         }
-        
+
         &__text {
             display: flex;
             flex-direction: column;
@@ -406,70 +431,71 @@ footer {
             color: black;
 
 
-            & > *:not(:last-child){
+            &>*:not(:last-child) {
                 margin-bottom: 15px;
             }
 
 
-            a{
+            a {
                 color: black;
-                
-                &.contact{
 
-                    &-tel{
-                        svg{
+                &.contact {
+
+                    &-tel {
+                        svg {
 
                             margin-right: calc(var(--espaciado-footer) / 1.9);
                         }
                     }
 
-                    &-mail{
-                        svg{
+                    &-mail {
+                        svg {
                             height: 15px;
                             margin-right: calc(var(--espaciado-footer) / 3);
                         }
                     }
 
-                    
+
                 }
             }
 
-            &-address{
+            &-address {
                 white-space: pre-line;
                 padding-left: var(--espaciado-footer);
                 position: relative;
 
-                svg{
+                svg {
                     position: absolute;
                     left: 0;
                     top: 5%;
                 }
 
-                
+
             }
 
-            svg{
+            svg {
                 height: 25px;
             }
 
         }
 
-        &__media{
-            
+        &__media {
+
             width: 100%;
             padding-left: var(--espaciado-footer);
             font-weight: 600;
-            p{
+
+            p {
 
                 white-space: pre-line;
             }
 
-            a{
+            a {
                 display: inline-block;
                 margin-top: 15px;
                 margin-right: 15px;
             }
-        
+
         }
     }
 }
