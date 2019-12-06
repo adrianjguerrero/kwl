@@ -121,6 +121,10 @@ nav {
     nav {
         padding: 0;
 
+        @include rwd('max', 768px){
+            padding-left: 7%;
+        }
+
         .navbar-brand {
             @include rwd('max', 768px) {
                 justify-content: center;
@@ -235,6 +239,7 @@ nav {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 15px;
         }
 
         @include rwd('min', 768px) {
