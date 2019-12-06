@@ -9455,8 +9455,9 @@ nav svg {
 .video-section__texto > *:not(:last-child) {
   margin-bottom: 24px;
 }
-.video-section button {
+.video-section a {
   font-weight: 600;
+  padding: 5px 15px;
   background: var(--primary);
   border: 3px solid black;
   border-radius: 15px;
@@ -9465,7 +9466,7 @@ nav svg {
   align-self: flex-start;
 }
 @media screen and (max-width: 768px) {
-  .video-section button {
+  .video-section a {
     align-self: center;
   }
 }
