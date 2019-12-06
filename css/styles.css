@@ -9363,7 +9363,7 @@ section {
 }
 
 @media screen and (min-width: 768px) {
-  .section {
+  .seccion {
     padding: inherit;
     height: 100vh;
   }
@@ -9466,8 +9466,12 @@ nav svg {
 }
 
 .membresias {
-  padding-top: 0;
   background-color: var(--primary);
+}
+@media screen and (min-width: 768px) {
+  .membresias {
+    padding-top: 0;
+  }
 }
 .membresias .columns.is-multiline {
   justify-content: space-evenly;
@@ -9520,9 +9524,15 @@ nav svg {
   text-align: left;
   padding-left: 2px;
   font-size: 40px;
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
   border-radius: 5px 5px 0 0;
   padding-top: 10px;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .membresias__membresia h3 {
+    text-align: center;
+  }
 }
 .membresias__membresia p:nth-of-type(2) {
   font-size: 20px;

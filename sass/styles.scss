@@ -46,7 +46,7 @@ section {
     }
 }
 
-.section{
+.seccion{
 
     @include rwd('min',768px){
         padding: inherit;
@@ -85,7 +85,7 @@ nav {
 
     .navbar-brand{
         justify-content: center;
-    margin-bottom: 20px;
+        margin-bottom: 20px;
     }
 
     svg {
@@ -172,8 +172,13 @@ nav {
 }
 
 .membresias {
-    padding-top: 0;
     background-color: var(--primary);
+    
+    @include rwd('min',768px){
+        
+        padding-top: 0;
+    }
+
     .columns.is-multiline {
         justify-content: space-evenly;
     }
@@ -232,9 +237,14 @@ nav {
             text-align: left;
             padding-left: 2px;
             font-size: 40px;
-            margin-bottom: 0 !important;
+            margin-bottom: 0 ;
             border-radius: 5px 5px 0 0;
             padding-top: 10px;
+            font-weight: 600;
+
+            @include rwd('max',768px){
+                text-align: center;
+            }
         }
 
         p:nth-of-type(2) {

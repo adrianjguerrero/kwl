@@ -12,7 +12,7 @@
 <body>
 
     <div id="fullpage">
-        <header class="section video-section">
+        <header class="seccion video-section">
             <nav class="navbar">
                 <div class="navbar-brand">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 85">
@@ -43,12 +43,12 @@
     
         </header>
     
-        <section class="section membresias">
+        <section class="seccion membresias">
             <div class="container">
                 <div class="columns is-multiline">
                     <h2 class="column title is-2 is-12">Membresías</h2>
                     <div class="column membresias__membresia">
-                        <h3 class="title">
+                        <h3>
                             PLAN
                         </h3>
                         <p class="membresias__name">
@@ -68,7 +68,7 @@
                         </ul>
                     </div>
                     <div class="column membresias__membresia">
-                        <h3 class="title">
+                        <h3>
                             PLAN
                         </h3>
                         <p class="membresias__name">
@@ -89,7 +89,7 @@
                         </ul>
                     </div>
                     <div class="column membresias__membresia">
-                        <h3 class="title">
+                        <h3>
                             PLAN
                         </h3>
                         <p class="membresias__name">
@@ -112,7 +112,7 @@
             </div>
         </section>
     
-        <section class="section gallery">
+        <section class="seccion gallery">
     
             <div id="lightgallery" class="columns is-multiline">
                 <h2 class="column is-12 title is-2">Espacios para ser productivos</h2>
@@ -150,7 +150,7 @@
     
         </section>
     
-        <section class="section features">
+        <section class="seccion features">
             <div class="container">
                 <ul class="columns is-multiline">
                     <h2 class="column title is-2 is-12">Servicios y beneficios</h2>
@@ -1265,7 +1265,7 @@
             </div>
         </section>
     
-        <footer class="section">
+        <footer class="seccion">
             <div class="container">
                 <h4 class="title is-2">¿Tienes dudas? ¡Ubicanos!</h4>
                 <div class="columns is-multiline footer__contact-info">
@@ -1296,7 +1296,9 @@
     <script src="js/lightgallery.min.js"></script>
 
     <script>
-        // var myFullpage = new fullpage('#fullpage');
+        var myFullpage = new fullpage('#fullpage',{
+            sectionSelector: '.seccion',
+        });
         lightGallery(document.getElementById('lightgallery')); 
     </script>
         
