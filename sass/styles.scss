@@ -46,14 +46,21 @@ section {
     }
 }
 
+.iScrollIndicator{
+    width: 0!important;
+    // scroll del fullpagejs
+}
+
 .seccion{
 
     @include rwd('min',768px){
         padding: inherit;
 
-        height: 100vh;
     }
 
+    
+    
+    // height: 100vh;
     @include rwd('max',768px){
         // padding: 0;
     }
@@ -179,6 +186,10 @@ nav {
         padding-top: 0;
     }
 
+    @include rwd('max',768px){
+        padding: 35px 15px;
+    }
+
     .columns.is-multiline {
         justify-content: space-evenly;
     }
@@ -212,12 +223,16 @@ nav {
     }
 
     &__membresia {
-        max-width: 302px;
-
+        
         @include rwd('max',768px){
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        
+        @include rwd('min',768px){
+            max-width: 302px;
+
         }
 
         h2 {
@@ -244,6 +259,7 @@ nav {
 
             @include rwd('max',768px){
                 text-align: center;
+                width: 90%;
             }
         }
 
@@ -266,35 +282,32 @@ nav {
     }
 }
 
-.features {
-    padding-top: 0;
-    ul {
-        li {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            white-space: pre-line;
-            font-weight: 600;
-            color: black;
-            text-align: center;
-
-            svg {
-                height: 50px;
-            }
-        }
-
-    }
-}
 
 .gallery {
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
 
+    @include rwd('max',768px){
+        padding-top: 15px;
+        .columns{
+            display: flex;
+
+            & > .column{
+                flex: none;
+            }
+        }
+
+    }
+
     h2 {
         font-weight: 600;
         padding-left: 40px;
+
+        @include rwd('max',768px){
+            padding-left: 12px;
+            width: 100%;
+        }
     }
 
     .column:not(h2) {
@@ -330,6 +343,10 @@ nav {
             transition: opacity 0.3s ease-in;
             white-space: pre-line;
             letter-spacing: 3px;
+
+            @include rwd('max',768px){
+                font-size: 15px;
+            }
         }
 
         img {
@@ -342,6 +359,28 @@ nav {
             cursor: pointer;
 
         }
+    }
+}
+
+
+.features {
+    padding-top: 0;
+    ul {
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            white-space: pre-line;
+            font-weight: 600;
+            color: black;
+            text-align: center;
+
+            svg {
+                height: 50px;
+            }
+        }
+
     }
 }
 

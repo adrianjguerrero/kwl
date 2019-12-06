@@ -9362,10 +9362,13 @@ section {
   }
 }
 
+.iScrollIndicator {
+  width: 0 !important;
+}
+
 @media screen and (min-width: 768px) {
   .seccion {
     padding: inherit;
-    height: 100vh;
   }
 }
 .title {
@@ -9473,6 +9476,11 @@ nav svg {
     padding-top: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .membresias {
+    padding: 35px 15px;
+  }
+}
 .membresias .columns.is-multiline {
   justify-content: space-evenly;
 }
@@ -9499,14 +9507,16 @@ nav svg {
   margin-top: -18px;
   margin-bottom: 15px;
 }
-.membresias__membresia {
-  max-width: 302px;
-}
 @media screen and (max-width: 768px) {
   .membresias__membresia {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .membresias__membresia {
+    max-width: 302px;
   }
 }
 .membresias__membresia h2 {
@@ -9532,6 +9542,7 @@ nav svg {
 @media screen and (max-width: 768px) {
   .membresias__membresia h3 {
     text-align: center;
+    width: 90%;
   }
 }
 .membresias__membresia p:nth-of-type(2) {
@@ -9544,31 +9555,31 @@ nav svg {
   content: "-";
 }
 
-.features {
-  padding-top: 0;
-}
-.features ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  white-space: pre-line;
-  font-weight: 600;
-  color: black;
-  text-align: center;
-}
-.features ul li svg {
-  height: 50px;
-}
-
 .gallery {
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
 }
+@media screen and (max-width: 768px) {
+  .gallery {
+    padding-top: 15px;
+  }
+  .gallery .columns {
+    display: flex;
+  }
+  .gallery .columns > .column {
+    flex: none;
+  }
+}
 .gallery h2 {
   font-weight: 600;
   padding-left: 40px;
+}
+@media screen and (max-width: 768px) {
+  .gallery h2 {
+    padding-left: 12px;
+    width: 100%;
+  }
 }
 .gallery .column:not(h2) {
   padding: 0;
@@ -9598,6 +9609,11 @@ nav svg {
   white-space: pre-line;
   letter-spacing: 3px;
 }
+@media screen and (max-width: 768px) {
+  .gallery .column:not(h2) p {
+    font-size: 15px;
+  }
+}
 .gallery .column:not(h2) img {
   width: 100%;
   height: 100%;
@@ -9606,6 +9622,23 @@ nav svg {
   filter: grayscale(1);
   transition: filter 0.3s ease-in;
   cursor: pointer;
+}
+
+.features {
+  padding-top: 0;
+}
+.features ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  white-space: pre-line;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+}
+.features ul li svg {
+  height: 50px;
 }
 
 footer .footer__map iframe {
