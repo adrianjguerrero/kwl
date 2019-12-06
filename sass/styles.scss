@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900&display=swap');
 
@@ -32,6 +30,10 @@ $primary: #fbed21;
 //fullpage.js
 @import "../css/fullpage.min.css";
 
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+
 
 section {
 
@@ -46,10 +48,14 @@ section {
 
 .section{
 
-    padding: inherit;
     @include rwd('min',768px){
+        padding: inherit;
 
         height: 100vh;
+    }
+
+    @include rwd('max',768px){
+        // padding: 0;
     }
 }
 
@@ -63,6 +69,13 @@ section {
 
 .column{
     padding: initial;
+
+    &s{
+        @include rwd('max',768px){
+
+            margin: 0;
+        }
+    }
 }
 
 
@@ -84,7 +97,7 @@ nav {
     padding: 50px 0px 30px 50px;
 
     @include rwd('max',768px){
-        padding: 0;
+        padding: 25px 0px 0px 0px;
     }
     
 

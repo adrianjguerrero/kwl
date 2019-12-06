@@ -2,10 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900&display=swap");
 @import "../css/lightgallery.min.css";
 @import "../css/fullpage.min.css";
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --primary: #fbed21;
   --espaciado-footer: 35px;
@@ -9352,6 +9348,10 @@ label.panel-block:hover {
   padding: 3rem 1.5rem 6rem;
 }
 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 section {
   padding: 60px 30px;
   color: black;
@@ -9362,15 +9362,12 @@ section {
   }
 }
 
-.section {
-  padding: inherit;
-}
 @media screen and (min-width: 768px) {
   .section {
+    padding: inherit;
     height: 100vh;
   }
 }
-
 .title {
   color: black;
 }
@@ -9382,6 +9379,11 @@ section {
 
 .column {
   padding: initial;
+}
+@media screen and (max-width: 768px) {
+  .columns {
+    margin: 0;
+  }
 }
 
 nav {
@@ -9401,7 +9403,7 @@ nav svg {
 }
 @media screen and (max-width: 768px) {
   .video-section {
-    padding: 0;
+    padding: 25px 0px 0px 0px;
   }
 }
 .video-section__texto {
