@@ -3162,6 +3162,13 @@ nav svg {
 .video-section__mouse:active, .video-section__mouse:focus {
   outline: none;
 }
+@media screen and (max-width: 768px) {
+  .video-section__mouse {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    align-self: center;
+  }
+}
 .video-section__mouse svg {
   height: 100%;
   position: absolute;
@@ -3341,6 +3348,11 @@ nav svg {
 @media screen and (min-width: 768px) {
   .features h2 {
     padding-left: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .features h2 {
+    padding-left: 12px;
   }
 }
 @media screen and (max-width: 768px) {

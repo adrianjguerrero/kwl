@@ -208,7 +208,12 @@ nav {
         &:focus{
             outline: none;
         }
-        
+
+        @include rwd('max',768px){
+            margin-top: -10px;
+            margin-bottom: 20px;
+            align-self: center;
+        }
         svg{
             height: 100%;
             position: absolute;
@@ -422,6 +427,10 @@ nav {
         @include rwd('min', 768px) {
             padding-left: 40px;
 
+        }
+
+        @include rwd('max',768px){
+            padding-left: 12px;
         }
     }
 
