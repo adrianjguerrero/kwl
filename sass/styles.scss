@@ -57,6 +57,10 @@ section {
     // scroll del fullpagejs
 }
 
+.lg-backdrop.in{
+    opacity: 0.9;
+}
+
 .seccion {
 
     @include rwd('min', 768px) {
@@ -587,7 +591,7 @@ footer {
         &:active{
             outline: none;
         }
-        
+
         @include rwd('min',768px){
 
             right: 15%;
@@ -595,6 +599,7 @@ footer {
 
     }
 }
+
 
 @keyframes move-mouse{
     to{

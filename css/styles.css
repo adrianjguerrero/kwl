@@ -3037,6 +3037,10 @@ section {
   width: 0 !important;
 }
 
+.lg-backdrop.in {
+  opacity: 0.9;
+}
+
 @media screen and (min-width: 768px) {
   .seccion {
     padding: inherit;
