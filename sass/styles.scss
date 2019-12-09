@@ -107,10 +107,10 @@ nav {
 }
 
 .video-section {
-    padding: 20px 0px 30px 50px;
+    padding: 20px 0px 30px 50px!important;
 
     @include rwd('max', 768px) {
-        padding: 25px 0px 0px 0px;
+        padding: 25px 0px 0px 0px!important;
     }
 
 
