@@ -1294,6 +1294,7 @@
                     </address>
                 </div>
             </div>
+            <button class="go-top">Ir arriba</button>
         </footer>
     </div>
 
@@ -1306,13 +1307,20 @@
             sectionSelector: '.seccion',
             scrollOverflow: true,
             paddingTop: '20px',
+            verticalCentered: true
         });
         lightGallery(document.getElementById('lightgallery')); 
 
         let btnNext = document.querySelector('.video-section__mouse');
 
+        let goTop = document.querySelector('.go-top');
+
         btnNext.addEventListener('click',() => {
             fullpage_api.moveSectionDown();
+        });
+
+        goTop.addEventListener('click',() => {
+            fullpage_api.moveTo(1);
         });
     </script>
         
