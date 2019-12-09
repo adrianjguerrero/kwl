@@ -3073,7 +3073,7 @@ nav svg {
 }
 
 .video-section {
-  padding: 50px 0px 30px 50px;
+  padding: 20px 0px 30px 50px;
 }
 @media screen and (max-width: 768px) {
   .video-section {
@@ -3144,6 +3144,34 @@ nav svg {
     align-self: center;
   }
 }
+.video-section__mouse {
+  position: relative;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  align-self: flex-start;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.video-section__mouse:active, .video-section__mouse:focus {
+  outline: none;
+}
+.video-section__mouse svg {
+  height: 100%;
+  position: absolute;
+}
+.video-section__mouse--front {
+  top: 50%;
+  transform-origin: top;
+  transform: scaleY(0.9);
+  animation: move-mouse 0.5s ease-in-out alternate infinite;
+}
 
 .membresias {
   background-color: var(--primary);
@@ -3160,6 +3188,11 @@ nav svg {
 }
 .membresias .columns.is-multiline {
   justify-content: space-evenly;
+}
+@media screen and (min-width: 768px) {
+  .membresias {
+    padding-left: 40px;
+  }
 }
 .membresias__name {
   font-size: 30px;
@@ -3305,8 +3338,10 @@ nav svg {
 .features {
   padding-top: 0;
 }
-.features h2 {
-  padding-left: 8px;
+@media screen and (min-width: 768px) {
+  .features h2 {
+    padding-left: 40px;
+  }
 }
 @media screen and (max-width: 768px) {
   .features ul {
@@ -3335,6 +3370,12 @@ nav svg {
 @media screen and (max-width: 768px) {
   footer h4 {
     padding-left: 8px;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer h4 {
+    padding-left: 40px;
+    margin-bottom: 35px;
   }
 }
 footer .footer__map iframe {
@@ -3394,6 +3435,15 @@ footer .footer__media a {
   display: inline-block;
   margin-top: 15px;
   margin-right: 15px;
+}
+
+@keyframes move-mouse {
+  to {
+    transform: scaleY(0.9);
+  }
+  from {
+    transform: scaleY(1.1);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -107,7 +107,7 @@ nav {
 }
 
 .video-section {
-    padding: 50px 0px 30px 50px;
+    padding: 20px 0px 30px 50px;
 
     @include rwd('max', 768px) {
         padding: 25px 0px 0px 0px;
@@ -187,6 +187,40 @@ nav {
             align-self: center;
         }
     }
+
+    &__mouse{
+        position: relative;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        align-self: flex-start;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        
+
+        &:active,
+        &:focus{
+            outline: none;
+        }
+        
+        svg{
+            height: 100%;
+            position: absolute;
+        }
+
+        &--front{
+            top: 50%;
+            transform-origin: top;
+            transform: scaleY(0.9);
+            animation: move-mouse 0.5s ease-in-out alternate infinite;
+        }
+    }
 }
 
 .membresias {
@@ -205,6 +239,11 @@ nav {
         justify-content: space-evenly;
     }
 
+
+    @include rwd('min', 768px) {
+        padding-left: 40px;
+
+    }
     &__name {
         font-size: 30px;
 
@@ -249,6 +288,7 @@ nav {
 
         h2 {
             font-weight: 600;
+            
         }
 
         h3,
@@ -378,7 +418,11 @@ nav {
 
 .features {
     h2 {
-        padding-left: 8px;
+        // padding-left: 8px;
+        @include rwd('min', 768px) {
+            padding-left: 40px;
+
+        }
     }
 
     padding-top: 0;
@@ -416,6 +460,12 @@ footer {
     h4 {
         @include rwd('max', 768px) {
             padding-left: 8px;
+        }
+
+        @include rwd('min', 768px) {
+            padding-left: 40px;
+            margin-bottom: 35px;
+
         }
     }
 
@@ -509,5 +559,14 @@ footer {
             }
 
         }
+    }
+}
+
+@keyframes move-mouse{
+    to{
+        transform: scaleY(0.9);
+    }
+    from{
+        transform: scaleY(1.1);
     }
 }
