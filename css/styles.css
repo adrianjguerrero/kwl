@@ -3293,14 +3293,16 @@ nav svg {
     flex: none;
   }
 }
-.gallery h2 {
+.gallery h2.title.is-2 {
   font-weight: 600;
   padding-left: 40px;
+  margin-bottom: 35px;
 }
 @media screen and (max-width: 768px) {
-  .gallery h2 {
+  .gallery h2.title.is-2 {
     padding-left: 12px;
     width: 100%;
+    margin-bottom: 15px;
   }
 }
 .gallery .column:not(h2) {
