@@ -407,6 +407,7 @@ nav {
             transition: opacity 0.3s ease-in;
             white-space: pre-line;
             letter-spacing: 3px;
+            text-shadow:  0 0 3px black;
 
             @include rwd('max', 768px) {
                 font-size: 15px;
@@ -578,23 +579,37 @@ footer {
 
     .go-top{
         position: absolute;
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         background: none;
-        border: 1px solid black;
+        border: none;
         cursor: pointer;
         right: 2%;
+
+        transition: fill 0.3s ease-in;
 
         &:focus,
         &:active{
             outline: none;
         }
 
-        @include rwd('min',768px){
+        .st1{
+            transition: stroke 0.3s ease-in;
+        }
 
+        &:hover{
+            fill: var(--primary);
+
+            .st1{
+                stroke: var(--primary);
+            }
+        }
+
+        @include rwd('min',768px){
+            bottom: 18%;
             right: 15%;
         }
 

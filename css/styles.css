@@ -3332,6 +3332,7 @@ nav svg {
   transition: opacity 0.3s ease-in;
   white-space: pre-line;
   letter-spacing: 3px;
+  text-shadow: 0 0 3px black;
 }
 @media screen and (max-width: 768px) {
   .gallery .column:not(h2) p {
@@ -3456,21 +3457,32 @@ footer .footer__media a {
 }
 footer .go-top {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background: none;
-  border: 1px solid black;
+  border: none;
   cursor: pointer;
   right: 2%;
+  transition: fill 0.3s ease-in;
 }
 footer .go-top:focus, footer .go-top:active {
   outline: none;
 }
+footer .go-top .st1 {
+  transition: stroke 0.3s ease-in;
+}
+footer .go-top:hover {
+  fill: var(--primary);
+}
+footer .go-top:hover .st1 {
+  stroke: var(--primary);
+}
 @media screen and (min-width: 768px) {
   footer .go-top {
+    bottom: 18%;
     right: 15%;
   }
 }
