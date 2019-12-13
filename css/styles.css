@@ -3087,6 +3087,15 @@ nav svg {
 .video-section__texto {
   padding: 15px 25px;
 }
+.video-section__texto h1 {
+  text-align: left;
+  white-space: pre-line;
+  align-self: flex-start;
+}
+.video-section__texto p {
+  color: black;
+  font-weight: 600;
+}
 .video-section nav {
   padding: 0;
 }

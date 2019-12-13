@@ -120,6 +120,17 @@ nav {
 
     &__texto {
         padding: 15px 25px;
+
+        h1{
+            text-align: left;
+            white-space: pre-line;
+            align-self: flex-start;
+        }
+
+        p{
+            color: black;
+            font-weight: 600;
+        }
     }
 
     nav {
