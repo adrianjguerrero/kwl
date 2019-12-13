@@ -7,6 +7,7 @@ $primary: #fbed21;
 :root {
     --primary: #{$primary};
     --espaciado-footer: 35px;
+    --margin-title: 97px;
 }
 
 
@@ -57,7 +58,7 @@ section {
     // scroll del fullpagejs
 }
 
-.lg-backdrop.in{
+.lg-backdrop.in {
     opacity: 0.9;
 }
 
@@ -111,28 +112,32 @@ nav {
 }
 
 .video-section {
-    padding: 20px 0px 30px 50px!important;
+    padding: 0px 0px 30px 50px !important;
+
+    @include rwd('min', 768px) {
+        // margin-top: -45px;
+    }
 
     @include rwd('max', 768px) {
-        padding: 25px 0px 0px 0px!important;
+        padding: 25px 0px 0px 0px !important;
     }
 
 
     &__texto {
         padding: 15px 25px;
 
-        h1{
+        h1 {
             text-align: left;
             white-space: pre-line;
             align-self: flex-start;
 
-            @include rwd('max',768px){
+            @include rwd('max', 768px) {
                 align-self: initial;
                 text-align: center;
             }
         }
 
-        p{
+        p {
             color: black;
             font-weight: 600;
         }
@@ -140,9 +145,13 @@ nav {
 
     nav {
         padding: 0;
+        position: absolute;
+        top: 13%;
 
-        @include rwd('max', 768px){
+        @include rwd('max', 768px) {
             padding-left: 7%;
+            position: relative;
+            top: unset;
         }
 
         .navbar-brand {
@@ -176,6 +185,10 @@ nav {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+
+                @include rwd('min',768px){
+                    width: 88%;
+                }
             }
 
             h1 {
@@ -208,7 +221,7 @@ nav {
         }
     }
 
-    &__mouse{
+    &__mouse {
         position: relative;
         width: 150px;
         display: flex;
@@ -222,24 +235,25 @@ nav {
         background: none;
         border: none;
         cursor: pointer;
-        
+
 
         &:active,
-        &:focus{
+        &:focus {
             outline: none;
         }
 
-        @include rwd('max',768px){
+        @include rwd('max', 768px) {
             margin-top: -10px;
             margin-bottom: 20px;
             align-self: center;
         }
-        svg{
+
+        svg {
             height: 100%;
             position: absolute;
         }
 
-        &--front{
+        &--front {
             top: 50%;
             transform-origin: top;
             transform: scaleY(0.9);
@@ -269,6 +283,7 @@ nav {
         padding-left: 40px;
 
     }
+
     &__name {
         font-size: 30px;
 
@@ -314,7 +329,7 @@ nav {
 
         h2 {
             font-weight: 600;
-            
+
         }
 
         h3,
@@ -381,8 +396,9 @@ nav {
 
     h2.title.is-2 {
         font-weight: 600;
-        padding-left: 40px;
+        padding-left: var(--margin-title);
         margin-bottom: 35px;
+
         @include rwd('max', 768px) {
             padding-left: 12px;
             width: 100%;
@@ -406,6 +422,10 @@ nav {
                 opacity: 0;
                 cursor: pointer;
             }
+
+            &::after{
+                opacity: 0;
+            }
         }
 
         p {
@@ -423,7 +443,7 @@ nav {
             transition: opacity 0.3s ease-in;
             white-space: pre-line;
             letter-spacing: 3px;
-            text-shadow:  0 0 3px black;
+            
 
             @include rwd('max', 768px) {
                 font-size: 15px;
@@ -440,19 +460,36 @@ nav {
             cursor: pointer;
 
         }
+
+        
+            text-shadow: 0 0 3px black;
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: black;
+                opacity: 0.6;
+                transition: 0.3s opacity ease-in;
+                height: 100%;
+                width: 100%;
+            }
+
     }
 }
 
 
 .features {
     h2 {
+
         // padding-left: 8px;
         @include rwd('min', 768px) {
-            padding-left: 40px;
+            padding-left: var(--margin-title);
+            margin-bottom: 55px!important;
 
         }
 
-        @include rwd('max',768px){
+        @include rwd('max', 768px) {
             padding-left: 12px;
         }
     }
@@ -482,6 +519,10 @@ nav {
             @include rwd('max', 768px) {
                 margin-bottom: 15px;
             }
+            @include rwd('min', 768px){
+
+                margin-bottom: 25px;
+            }
         }
 
     }
@@ -495,18 +536,28 @@ footer {
         }
 
         @include rwd('min', 768px) {
-            padding-left: 40px;
+            padding-left: var(--margin-title);
             margin-bottom: 40px;
 
+        }
+
+        span{
+            font-weight: 800;
         }
     }
 
     .footer {
 
         &__map {
+
+            @include rwd('min', 768px){
+                padding-left: var(--margin-title);
+            }
+
             iframe {
                 width: 100%;
                 height: 100%;
+
             }
 
             @include rwd('max', 768px) {
@@ -593,7 +644,7 @@ footer {
         }
     }
 
-    .go-top{
+    .go-top {
         position: absolute;
         width: 50px;
         height: 50px;
@@ -609,23 +660,23 @@ footer {
         transition: fill 0.3s ease-in;
 
         &:focus,
-        &:active{
+        &:active {
             outline: none;
         }
 
-        .st1{
+        .st1 {
             transition: stroke 0.3s ease-in;
         }
 
-        &:hover{
+        &:hover {
             fill: var(--primary);
 
-            .st1{
+            .st1 {
                 stroke: var(--primary);
             }
         }
 
-        @include rwd('min',768px){
+        @include rwd('min', 768px) {
             width: 70px;
             height: 70px;
             bottom: 18%;
@@ -636,11 +687,12 @@ footer {
 }
 
 
-@keyframes move-mouse{
-    to{
+@keyframes move-mouse {
+    to {
         transform: scaleY(0.9);
     }
-    from{
+
+    from {
         transform: scaleY(1.1);
     }
 }

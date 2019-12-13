@@ -4,6 +4,7 @@
 :root {
   --primary: #fbed21;
   --espaciado-footer: 35px;
+  --margin-title: 97px;
 }
 
 @keyframes spinAround {
@@ -3077,7 +3078,7 @@ nav svg {
 }
 
 .video-section {
-  padding: 20px 0px 30px 50px !important;
+  padding: 0px 0px 30px 50px !important;
 }
 @media screen and (max-width: 768px) {
   .video-section {
@@ -3104,10 +3105,14 @@ nav svg {
 }
 .video-section nav {
   padding: 0;
+  position: absolute;
+  top: 13%;
 }
 @media screen and (max-width: 768px) {
   .video-section nav {
     padding-left: 7%;
+    position: relative;
+    top: unset;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3139,6 +3144,11 @@ nav svg {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .video-section .columns .column img.video {
+    width: 88%;
+  }
 }
 @media screen and (max-width: 768px) {
   .video-section .columns .column h1 {
@@ -3310,7 +3320,7 @@ nav svg {
 }
 .gallery h2.title.is-2 {
   font-weight: 600;
-  padding-left: 40px;
+  padding-left: var(--margin-title);
   margin-bottom: 35px;
 }
 @media screen and (max-width: 768px) {
@@ -3324,6 +3334,7 @@ nav svg {
   padding: 0;
   height: 250px;
   position: relative;
+  text-shadow: 0 0 3px black;
 }
 .gallery .column:not(h2):hover img {
   filter: grayscale(0);
@@ -3331,6 +3342,9 @@ nav svg {
 .gallery .column:not(h2):hover p {
   opacity: 0;
   cursor: pointer;
+}
+.gallery .column:not(h2):hover::after {
+  opacity: 0;
 }
 .gallery .column:not(h2) p {
   font-weight: 900;
@@ -3347,7 +3361,6 @@ nav svg {
   transition: opacity 0.3s ease-in;
   white-space: pre-line;
   letter-spacing: 3px;
-  text-shadow: 0 0 3px black;
 }
 @media screen and (max-width: 768px) {
   .gallery .column:not(h2) p {
@@ -3363,13 +3376,25 @@ nav svg {
   transition: filter 0.3s ease-in;
   cursor: pointer;
 }
+.gallery .column:not(h2)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: black;
+  opacity: 0.6;
+  transition: 0.3s opacity ease-in;
+  height: 100%;
+  width: 100%;
+}
 
 .features {
   padding-top: 0;
 }
 @media screen and (min-width: 768px) {
   .features h2 {
-    padding-left: 40px;
+    padding-left: var(--margin-title);
+    margin-bottom: 55px !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3400,6 +3425,11 @@ nav svg {
     margin-bottom: 15px;
   }
 }
+@media screen and (min-width: 768px) {
+  .features ul li {
+    margin-bottom: 25px;
+  }
+}
 
 @media screen and (max-width: 768px) {
   footer h4.title.is-2 {
@@ -3408,8 +3438,16 @@ nav svg {
 }
 @media screen and (min-width: 768px) {
   footer h4.title.is-2 {
-    padding-left: 40px;
+    padding-left: var(--margin-title);
     margin-bottom: 40px;
+  }
+}
+footer h4.title.is-2 span {
+  font-weight: 800;
+}
+@media screen and (min-width: 768px) {
+  footer .footer__map {
+    padding-left: var(--margin-title);
   }
 }
 footer .footer__map iframe {
