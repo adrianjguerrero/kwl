@@ -429,7 +429,7 @@ nav {
         }
 
         p {
-            font-weight: 900;
+            font-weight: 600;
             font-size: 30px;
             color: white;
             display: block;
@@ -480,12 +480,14 @@ nav {
 
 
 .features {
+    display: flex;
+    align-items: center;
     h2 {
 
         // padding-left: 8px;
         @include rwd('min', 768px) {
             padding-left: var(--margin-title);
-            margin-bottom: 55px!important;
+            margin-bottom: 80px!important;
 
         }
 
@@ -500,6 +502,10 @@ nav {
 
         @include rwd('max', 768px) {
             display: flex;
+        }
+
+        @include rwd('min', 768px){
+            padding: 0 10%;
         }
 
         li {

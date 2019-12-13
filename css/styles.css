@@ -3347,7 +3347,7 @@ nav svg {
   opacity: 0;
 }
 .gallery .column:not(h2) p {
-  font-weight: 900;
+  font-weight: 600;
   font-size: 30px;
   color: white;
   display: block;
@@ -3389,12 +3389,14 @@ nav svg {
 }
 
 .features {
+  display: flex;
+  align-items: center;
   padding-top: 0;
 }
 @media screen and (min-width: 768px) {
   .features h2 {
     padding-left: var(--margin-title);
-    margin-bottom: 55px !important;
+    margin-bottom: 80px !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3405,6 +3407,11 @@ nav svg {
 @media screen and (max-width: 768px) {
   .features ul {
     display: flex;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features ul {
+    padding: 0 10%;
   }
 }
 .features ul li {
