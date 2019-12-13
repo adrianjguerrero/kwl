@@ -3092,6 +3092,12 @@ nav svg {
   white-space: pre-line;
   align-self: flex-start;
 }
+@media screen and (max-width: 768px) {
+  .video-section__texto h1 {
+    align-self: initial;
+    text-align: center;
+  }
+}
 .video-section__texto p {
   color: black;
   font-weight: 600;
