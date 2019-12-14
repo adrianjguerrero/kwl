@@ -3106,7 +3106,7 @@ nav svg {
 .video-section nav {
   padding: 0;
   position: absolute;
-  top: 13%;
+  top: 6%;
 }
 @media screen and (max-width: 768px) {
   .video-section nav {
@@ -3153,6 +3153,11 @@ nav svg {
 @media screen and (max-width: 768px) {
   .video-section .columns .column h1 {
     font-size: 21px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .video-section__texto {
+    padding-top: 45px;
   }
 }
 .video-section__texto > *:not(:last-child) {
