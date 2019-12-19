@@ -97,19 +97,7 @@ section {
 }
 
 
-nav {
-    padding-left: 50px;
-    padding-top: 50px;
 
-    .navbar-brand {
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-
-    svg {
-        width: 150px;
-    }
-}
 
 .video-section {
     padding: 0px 0px 30px 50px !important;
@@ -122,6 +110,10 @@ nav {
         padding: 25px 0px 0px 0px !important;
     }
 
+
+    .fp-scroller{
+        overflow: visible;
+    }
 
     &__texto {
         padding: 15px 25px;
@@ -141,12 +133,34 @@ nav {
             color: black;
             font-weight: 600;
         }
+
+        @include rwd('min',768px){
+            padding-top: 45px;
+        }
+        
+        &>*:not(:last-child) {
+            margin-bottom: 13px;
+        }
+
+        ul{
+            font-size: 13px;
+        }
     }
 
     nav {
+        padding-left: 50px;
+        padding-top: 50px;
+        align-self: flex-start;
+        // margin-bottom: 10px!important;
+
+   
+
+    svg {
+        width: 150px;
+    }
         padding: 0;
-        position: absolute;
-        top: 6%;
+        // position: absolute;
+        // top: 6%;
 
         @include rwd('max', 768px) {
             padding-left: 7%;
@@ -157,7 +171,9 @@ nav {
         .navbar-brand {
             @include rwd('max', 768px) {
                 justify-content: center;
-                margin-bottom: 20px;
+                // margin-bottom: 20px;
+
+        
 
                 svg {
                     width: 96px;
@@ -200,16 +216,6 @@ nav {
     }
 
 
-    &__texto {
-
-        @include rwd('min',768px){
-            padding-top: 45px;
-        }
-        
-        &>*:not(:last-child) {
-            margin-bottom: 24px;
-        }
-    }
 
     a {
         font-weight: 600;
@@ -704,6 +710,6 @@ footer {
     }
 
     from {
-        transform: scaleY(1.1);
+        transform: scaleY(1);
     }
 }

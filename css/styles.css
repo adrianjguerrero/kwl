@@ -3065,18 +3065,6 @@ section {
   }
 }
 
-nav {
-  padding-left: 50px;
-  padding-top: 50px;
-}
-nav .navbar-brand {
-  justify-content: center;
-  margin-bottom: 20px;
-}
-nav svg {
-  width: 150px;
-}
-
 .video-section {
   padding: 0px 0px 30px 50px !important;
 }
@@ -3084,6 +3072,9 @@ nav svg {
   .video-section {
     padding: 25px 0px 0px 0px !important;
   }
+}
+.video-section .fp-scroller {
+  overflow: visible;
 }
 .video-section__texto {
   padding: 15px 25px;
@@ -3103,10 +3094,25 @@ nav svg {
   color: black;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .video-section__texto {
+    padding-top: 45px;
+  }
+}
+.video-section__texto > *:not(:last-child) {
+  margin-bottom: 13px;
+}
+.video-section__texto ul {
+  font-size: 13px;
+}
 .video-section nav {
+  padding-left: 50px;
+  padding-top: 50px;
+  align-self: flex-start;
   padding: 0;
-  position: absolute;
-  top: 6%;
+}
+.video-section nav svg {
+  width: 150px;
 }
 @media screen and (max-width: 768px) {
   .video-section nav {
@@ -3118,7 +3124,6 @@ nav svg {
 @media screen and (max-width: 768px) {
   .video-section nav .navbar-brand {
     justify-content: center;
-    margin-bottom: 20px;
   }
   .video-section nav .navbar-brand svg {
     width: 96px;
@@ -3154,14 +3159,6 @@ nav svg {
   .video-section .columns .column h1 {
     font-size: 21px;
   }
-}
-@media screen and (min-width: 768px) {
-  .video-section__texto {
-    padding-top: 45px;
-  }
-}
-.video-section__texto > *:not(:last-child) {
-  margin-bottom: 24px;
 }
 .video-section a {
   font-weight: 600;
@@ -3560,7 +3557,7 @@ footer .go-top:hover .st1 {
     transform: scaleY(0.9);
   }
   from {
-    transform: scaleY(1.1);
+    transform: scaleY(1);
   }
 }
 
