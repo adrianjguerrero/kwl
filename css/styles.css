@@ -3111,6 +3111,11 @@ section {
   align-self: flex-start;
   padding: 0;
 }
+@media screen and (max-width: 768px) {
+  .video-section nav {
+    align-self: center;
+  }
+}
 .video-section nav svg {
   width: 150px;
 }
@@ -3195,7 +3200,7 @@ section {
 }
 @media screen and (max-width: 768px) {
   .video-section__mouse {
-    margin-top: -10px;
+    margin-top: 2px;
     margin-bottom: 20px;
     align-self: center;
   }
@@ -3272,6 +3277,11 @@ section {
 .membresias__membresia h2 {
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .membresias__membresia h2 {
+    padding-left: 10px;
+  }
+}
 .membresias__membresia h3,
 .membresias__membresia p span {
   width: 100%;
@@ -3299,6 +3309,8 @@ section {
 }
 .membresias__membresia ul li {
   font-weight: 600;
+  font-size: 14px;
+  margin-top: 5px;
 }
 .membresias__membresia ul li::before {
   content: "-";
@@ -3394,6 +3406,9 @@ section {
   display: flex;
   align-items: center;
   padding-top: 0;
+}
+.features .fp-scroller {
+  overflow: visible;
 }
 @media screen and (min-width: 768px) {
   .features h2 {
