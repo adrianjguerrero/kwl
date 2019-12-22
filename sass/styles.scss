@@ -215,10 +215,10 @@ section {
                 object-fit: cover;
 
                 width: 90%;
-                height: 250px;
+                height: 161px;
 
                 @include rwd('min', 768px) {
-                    height: 500px;
+                    height: 455px;
 
 
                 }
