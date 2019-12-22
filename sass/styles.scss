@@ -119,6 +119,7 @@ section {
         padding: 15px 25px;
 
         h1 {
+            font-size: 28px;
             text-align: left;
             white-space: pre-line;
             align-self: flex-start;
@@ -132,6 +133,12 @@ section {
         p {
             color: black;
             font-weight: 600;
+            white-space: pre-line;
+            font-size: 15px;
+
+            span{
+                font-weight: 800;
+            }
         }
 
         @include rwd('min',768px){
@@ -223,7 +230,7 @@ section {
 
     a {
         font-weight: 600;
-        padding: 5px 15px;
+        padding: 5px 82px;
         background: var(--primary);
         border: 3px solid black;
         border-radius: 15px;
@@ -238,7 +245,7 @@ section {
 
     &__mouse {
         position: relative;
-        width: 150px;
+        width: 280px;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -3080,6 +3080,7 @@ section {
   padding: 15px 25px;
 }
 .video-section__texto h1 {
+  font-size: 28px;
   text-align: left;
   white-space: pre-line;
   align-self: flex-start;
@@ -3093,6 +3094,11 @@ section {
 .video-section__texto p {
   color: black;
   font-weight: 600;
+  white-space: pre-line;
+  font-size: 15px;
+}
+.video-section__texto p span {
+  font-weight: 800;
 }
 @media screen and (min-width: 768px) {
   .video-section__texto {
@@ -3167,7 +3173,7 @@ section {
 }
 .video-section a {
   font-weight: 600;
-  padding: 5px 15px;
+  padding: 5px 82px;
   background: var(--primary);
   border: 3px solid black;
   border-radius: 15px;
@@ -3182,7 +3188,7 @@ section {
 }
 .video-section__mouse {
   position: relative;
-  width: 150px;
+  width: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
