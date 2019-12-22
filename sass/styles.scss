@@ -111,7 +111,7 @@ section {
     }
 
 
-    .fp-scroller{
+    .fp-scroller {
         overflow: visible;
     }
 
@@ -136,20 +136,20 @@ section {
             white-space: pre-line;
             font-size: 15px;
 
-            span{
+            span {
                 font-weight: 800;
             }
         }
 
-        @include rwd('min',768px){
+        @include rwd('min', 768px) {
             padding-top: 45px;
         }
-        
+
         &>*:not(:last-child) {
             margin-bottom: 13px;
         }
 
-        ul{
+        ul {
             font-size: 13px;
         }
     }
@@ -160,15 +160,16 @@ section {
         align-self: flex-start;
         // margin-bottom: 10px!important;
 
-        @include rwd('max',768px){
+        @include rwd('max', 768px) {
             align-self: center;
         }
 
-   
 
-    svg {
-        width: 150px;
-    }
+
+        svg {
+            width: 150px;
+        }
+
         padding: 0;
         // position: absolute;
         // top: 6%;
@@ -184,7 +185,7 @@ section {
                 justify-content: center;
                 // margin-bottom: 20px;
 
-        
+
 
                 svg {
                     width: 96px;
@@ -208,13 +209,18 @@ section {
                 text-align: center;
             }
 
-            img.video {
-                height: 100%;
-                width: 100%;
+            .video {
+                // height: 100%;
+                // width: 100%;
                 object-fit: cover;
 
-                @include rwd('min',768px){
-                    width: 88%;
+                width: 98%;
+                height: 250px;
+
+                @include rwd('min', 768px) {
+                    height: 500px;
+
+
                 }
             }
 
@@ -352,7 +358,7 @@ section {
         h2 {
             font-weight: 600;
 
-            @include rwd('min', 768px){
+            @include rwd('min', 768px) {
                 padding-left: 10px;
             }
 
@@ -390,7 +396,7 @@ section {
 
         ul {
             li {
-                
+
                 font-weight: 600;
                 font-size: 14px;
                 margin-top: 5px;
@@ -452,7 +458,7 @@ section {
                 cursor: pointer;
             }
 
-            &::after{
+            &::after {
                 opacity: 0;
             }
         }
@@ -472,7 +478,7 @@ section {
             transition: opacity 0.3s ease-in;
             white-space: pre-line;
             letter-spacing: 3px;
-            
+
 
             @include rwd('max', 768px) {
                 font-size: 15px;
@@ -490,19 +496,20 @@ section {
 
         }
 
-        
-            text-shadow: 0 0 3px black;
-            &::after{
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                background: black;
-                opacity: 0.6;
-                transition: 0.3s opacity ease-in;
-                height: 100%;
-                width: 100%;
-            }
+
+        text-shadow: 0 0 3px black;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: black;
+            opacity: 0.6;
+            transition: 0.3s opacity ease-in;
+            height: 100%;
+            width: 100%;
+        }
 
     }
 }
@@ -512,15 +519,16 @@ section {
     display: flex;
     align-items: center;
 
-    .fp-scroller{
+    .fp-scroller {
         overflow: visible;
     }
+
     h2 {
 
         // padding-left: 8px;
         @include rwd('min', 768px) {
             padding-left: var(--margin-title);
-            margin-bottom: 80px!important;
+            margin-bottom: 80px !important;
 
         }
 
@@ -537,7 +545,7 @@ section {
             display: flex;
         }
 
-        @include rwd('min', 768px){
+        @include rwd('min', 768px) {
             padding: 0 10%;
         }
 
@@ -558,7 +566,8 @@ section {
             @include rwd('max', 768px) {
                 margin-bottom: 15px;
             }
-            @include rwd('min', 768px){
+
+            @include rwd('min', 768px) {
 
                 margin-bottom: 25px;
             }
@@ -580,7 +589,7 @@ footer {
 
         }
 
-        span{
+        span {
             font-weight: 800;
         }
     }
@@ -589,7 +598,7 @@ footer {
 
         &__map {
 
-            @include rwd('min', 768px){
+            @include rwd('min', 768px) {
                 padding-left: var(--margin-title);
             }
 

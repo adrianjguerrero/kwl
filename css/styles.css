@@ -3156,14 +3156,14 @@ section {
     text-align: center;
   }
 }
-.video-section .columns .column img.video {
-  height: 100%;
-  width: 100%;
+.video-section .columns .column .video {
   object-fit: cover;
+  width: 98%;
+  height: 250px;
 }
 @media screen and (min-width: 768px) {
-  .video-section .columns .column img.video {
-    width: 88%;
+  .video-section .columns .column .video {
+    height: 500px;
   }
 }
 @media screen and (max-width: 768px) {
