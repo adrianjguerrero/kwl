@@ -3114,13 +3114,8 @@ section {
 .video-section nav {
   padding-left: 50px;
   padding-top: 50px;
-  align-self: flex-start;
+  align-self: center;
   padding: 0;
-}
-@media screen and (max-width: 768px) {
-  .video-section nav {
-    align-self: center;
-  }
 }
 .video-section nav svg {
   width: 150px;
@@ -3317,9 +3312,6 @@ section {
   font-weight: 600;
   font-size: 14px;
   margin-top: 5px;
-}
-.membresias__membresia ul li::before {
-  content: "-";
 }
 
 .gallery {

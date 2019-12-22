@@ -157,11 +157,11 @@ section {
     nav {
         padding-left: 50px;
         padding-top: 50px;
-        align-self: flex-start;
+        // align-self: flex-start;
         // margin-bottom: 10px!important;
 
+        align-self: center;
         @include rwd('max', 768px) {
-            align-self: center;
         }
 
 
@@ -401,9 +401,9 @@ section {
                 font-size: 14px;
                 margin-top: 5px;
 
-                &::before {
-                    content: "-";
-                }
+                // &::before {
+                //     content: "-";
+                // }
             }
         }
 
