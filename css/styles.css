@@ -2,7 +2,7 @@
 @import "../css/lightgallery.min.css";
 @import "../css/fullpage.min.css";
 :root {
-  --primary: #fbed21;
+  --primary: #f9dc30;
   --espaciado-footer: 35px;
   --margin-title: 97px;
 }
@@ -2461,15 +2461,15 @@ a.has-text-dark:hover, a.has-text-dark:focus {
 }
 
 .has-text-primary {
-  color: #fbed21 !important;
+  color: #f9dc30 !important;
 }
 
 a.has-text-primary:hover, a.has-text-primary:focus {
-  color: #e5d604 !important;
+  color: #efce07 !important;
 }
 
 .has-background-primary {
-  background-color: #fbed21 !important;
+  background-color: #f9dc30 !important;
 }
 
 .has-text-link {
