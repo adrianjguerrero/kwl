@@ -3158,7 +3158,7 @@ section {
 }
 @media screen and (min-width: 768px) {
   .video-section .columns .column .video {
-    height: 455px;
+    height: 452px;
   }
 }
 @media screen and (max-width: 768px) {
