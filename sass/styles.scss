@@ -115,8 +115,79 @@ section {
         overflow: visible;
     }
 
+    &__actions{
+
+            
+        width: 100%;
+        display:flex;
+        justify-content: space-between;
+
+        @include rwd('max',768px){
+            flex-direction: column;
+        }
+        
+        &-mouse {
+            position: relative;
+            // width: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            // align-self: flex-start;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+    
+    
+            &:active,
+            &:focus {
+                outline: none;
+            }
+    
+            @include rwd('max', 768px) {
+                margin-top: 15px;
+                margin-bottom: 20px;
+                align-self: center;
+            }
+    
+            svg {
+                height: 100%;
+                position: absolute;
+            }
+    
+            &--front {
+                top: 50%;
+                transform-origin: top;
+                transform: scaleY(0.9);
+                animation: move-mouse 0.5s ease-in-out alternate infinite;
+            }
+        }
+
+        a {
+            font-weight: 600;
+            padding: 5px 82px;
+            background: var(--primary);
+            border: 3px solid black;
+            border-radius: 15px;
+            color: black;
+            font-weight: 900;
+            // align-self: flex-start;
+            height: 55px;
+            display: flex;
+            align-items: center;
+    
+            @include rwd('max', 768px) {
+                align-self: center;
+            }
+        }
+    }
+
     &__texto {
         padding: 15px 25px;
+        align-items: flex-start!important;
 
         h1 {
             font-size: 28px;
@@ -133,11 +204,11 @@ section {
         p {
             color: black;
             font-weight: 600;
-            white-space: pre-line;
+            // white-space: pre-line;
             font-size: 15px;
+            font-weight: 800;
 
             span {
-                font-weight: 800;
             }
         }
 
@@ -151,16 +222,33 @@ section {
 
         ul {
             font-size: 13px;
+
+            li{
+                display: flex;
+                align-items: center;
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    background: var(--primary);
+                    border-radius: 50%;
+                    margin-right: 5px;
+                }
+            }
         }
+
+        
+
     }
 
     nav {
-        padding-left: 50px;
+        // padding-left: 50px;
         padding-top: 50px;
+        align-self: center;
         // align-self: flex-start;
         // margin-bottom: 10px!important;
 
-        align-self: center;
         @include rwd('max', 768px) {
         }
 
@@ -175,7 +263,7 @@ section {
         // top: 6%;
 
         @include rwd('max', 768px) {
-            padding-left: 7%;
+            // padding-left: 7%;
             position: relative;
             top: unset;
         }
@@ -234,60 +322,9 @@ section {
 
 
 
-    a {
-        font-weight: 600;
-        padding: 5px 82px;
-        background: var(--primary);
-        border: 3px solid black;
-        border-radius: 15px;
-        color: black;
-        font-weight: 900;
-        align-self: flex-start;
+    
 
-        @include rwd('max', 768px) {
-            align-self: center;
-        }
-    }
-
-    &__mouse {
-        position: relative;
-        width: 280px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        align-self: flex-start;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-
-
-        &:active,
-        &:focus {
-            outline: none;
-        }
-
-        @include rwd('max', 768px) {
-            margin-top: 2px;
-            margin-bottom: 20px;
-            align-self: center;
-        }
-
-        svg {
-            height: 100%;
-            position: absolute;
-        }
-
-        &--front {
-            top: 50%;
-            transform-origin: top;
-            transform: scaleY(0.9);
-            animation: move-mouse 0.5s ease-in-out alternate infinite;
-        }
-    }
+   
 }
 
 .membresias {
